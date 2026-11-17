@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAIl0lEQVR4nO3dzW8UdRgH8Gc2m0giiQkWD7wsB5NqTEN5S43yH5AY0lZQiAdPHBSbcCItB4JaGj14QOXAxRoVkYLEmHjkJG0pGF6Clw0YacSLL4kRupwYD1OXYWbZnfk9z+9tft9PGpLWnd9O9/f1mWdeG8X//koAqupxHNteB/BYnQgBAnU12ysAfqsTNmHAgAoELOiBgAUVCFjQAwELKhCwoAcCFgQIWOrID3CgAgELmmhgQQUCFvRAwIIKBCzogYAFFQhY0AMBCyoQsNRjBAgYsAkDFmzCgAW78cBitALVnt5o7L0C9+Cv62beyEQPVOtDbkxr/7/64E+9SaoRxVq/kB67an0b9c6v5rUf1Do+FKF1FjRWIKTHHbW+QU2zrOu2ntrqzTqGBWW1vk0P/rgiP6z4iIT0uErHvMhvwpAel9VWb/apiYbKw63N4RGdceEKVHtmq+yAIE52jnAyNUxik44eKES3mz9LDeVED/T97X9sr4KvXtnwlMpicSw173WRUZQhOkzJB6gYIwnix4FKQHqklP8k49vNG1LHgewECOmRpfR5Csx43YEWCExL5lxk6u1UIJQfHcp8qmIzjt14YHFiNx5MSyZdYupRgYAFpzLCFKf+ZUEFAhb0QEGS24/HJixM2ISBGypSgV688Ub+hxcHvjS/Jp4Qq0B+P96lY27y/xVJyhLLj9Wz8Uzd06P2ymCIzbjl64HUKAQiWQSlSJx/FYhTTlCKHiVyMtWr/PATgAw9JDHjFdkLg5Li1L8sPh0HkioeKEKCvOmBZGc9+AyJzTjOhQUJ1wOBI2rx8k1mMl+a1lLHFifkrZjgjPt9KgMUie2EYTc+aOiBwDZUoDCJbcPQAwUJPRDwSJ7K8OBItI7LMMK+tENsxtFEAwtOZQRpeQsW0m687BYn7O2XJD96oITUrCM96IHAFTXRc6na2yl+8UD5IaLl+iEx4/5VIE4CkB5xXh5ITHJQ6noMROdRkgcSfVU8E0iPPn4fB2onA/fGlyN3HMjLTVgeslISNmHghopUIChJ7nogn1sgUCR3Vw8qUKDQA4Eb/N6NB0UBXs4BbkIPFCa5vTAEKEiCAUJ+goXdeFCF3XhwAypQmNADAYdYfnyuQJevjpd6/bZNU5rWxFsyu/EeKJuV4oMgVUzuViCR0JR6l5DCVN0eyExuur919ZNUvR7IYm7yAkhShU5lOBWdjGTdqhgjyQBZ43J00qobIwF2rgfyJTpplYqR6G09Rh3+7i3D7yirYIymT+xQGPzNfT+orJNVRnsg39PTdvnqeDpDanHJy4+jLVK+3ZVRmei0SYWm+LuIh8mbuzKqlJ4bC9dsvXU7TBJJ8mcvrBrpsZibPNEkcemtQL6nx6nc5DGSJHkqQ0uAEB2TkiSViJHju/Fep8ev6KRNn9gxTXR28oLJN7V/KsMd/kYnbfTQduodI4evifa0/FQjPW1JjAwQ7oF8TE/FotPWrRS5+Ud3J29eFBzNjKqmp013KRJ7Uj3S46xOGcKT6tkCSU9CXx2SeVL95M0FTeunSVDpSTySoeXyEeST6vkCTE9CRx0S6IEmb10SXy19gk1P4v8MSfZA/FG8EXh6EqOHtosGiDfC5K2fbH8gRSE9bQfnzxPJRIhfgfyA9GQcnD8vVIEAGIKoQCg/He059ZlEBeI0QL9csf0h9Ib0dLHn1DQzQvXYkyoCmjADgB4IWHinMpyH7VdPe7/5nJMBXJEIxMkANmHAwtyNdxq2XwXtPf2Fcgace0IZ2KEaA/RAkFCMAasHmtgwwFkcKgAVCBKKMUAPBESEHgi4bPRARDTReIE5AngNFQgSyhWIfWPHxPrnZX8VKQNDg7ZXwQ8nR1/DbT1gh8ytzRPrn7P9iwCH+tRXvAJhK9bTydHdnMVlbm2mOJ5Y1y/1K4FRvHmXfMTdxLr+o781BQc04Nitu+lvx55dqW+pSoruX/5IcLgnth5w8BlTHa/ryIQgrUsg1JZy1smRV5kjRK1LkgFase0AOfmcsnSGuoQgLRMItaVc9tUwNz0k+IApLy4xo8I5yLxSbSnnCcy4lgAd2Xnc7geTh92xjKktQ1IB0uLIzuOuxWhgaLBseUher7aUy6a2DEkNJbYbT51u9HEtQ0DJc1vlZlz7gUR3MrTva5VHuKuVE2eLkPhz7E000e5kKHCp9IjNuKFTGQ62RKHR9Dc0hHug+wsfdnkzZMiWdHqaZ8aW64cXPVAGSpF5Wv9+j3gP1LkNyrASoxN7VB5yq3Zk2Z3j0V3TIzDd8n8v7P7CByuGDhZ5ZZIhB897pDm7P9VTx+g0z4zJvkvUmu/xJ9AVLC7e6d/1calFjMVIbWe+FBfKT+f0zLyT/rbRWMt/Iy0X1Tcaa5oz+/t3fVJ8kfYWzfGC5L7HbbOaM/vT3zYaa0WmPmrNH+WPkre4eIeISmUoQ1+StBYhi+WnS7uTSQ8JlR8iilrzkyIDZSQBIqL+XZ/yR9MRJvEYuRkdImrOvJ3/oVyA5rQEiNIZ2i2Qobyyqeq433fndYGz9LaiU2T/vHlaY3qIKGrNvS81Vt7i4u/pbzUliU85Rlaio5ybRKOxRnBl9AaIchly1pPf/lh2EcPpmRrcxB9ENj1EFLXm3pMdMc+fDJXoiu6NPDwsOX5N17P0pgYlr4MTTw8RRa1Z7QEijzJ0rlCG7g33OKg9fl0lUlMbJeOSoSM9RBQtzb6rY9w8XzK08txs9xfcHX7ZzJoI0pQeIoqWZo9oGvpxvEjSynNz+R/eHX7J/Jpw6MtNW7R0wXSAfPH3sbPpb1eNjdpaE5fpOBtfka9VYyPtj2nV2Ij19XHzq+IPV2BKMpROEmRESxcO214H8Bie0goseEYisKAHAhZUIGBBDwQsqEDAggABC5poYKnnn8kCUBwqELCgBwIWVCBgQQ8ELKhAwIIeCFhQgYDlPxkTY9zJpWt/AAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="manifest" href="data:application/octet-stream;base64,eyJiYWNrZ3JvdW5kX2NvbG9yIjoiI0ZGRjhFRiIsImRlc2NyaXB0aW9uIjoi5oqK5a6d5a6d55qE54Wn54mH5oyJ5pyI6b6E5pS25oiQ5LiA5pys5oiQ6ZW/57qq5b+15YaM77yM54Wn54mH5ZKM6K6w5b2V5Y+q5L+d5a2Y5Zyo6Ieq5bex5omL5py66YeM44CCIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJpY29ucyI6W3sic2l6ZXMiOiIxOTJ4MTkyIiwic3JjIjoiaWNvbi0xOTIucG5nIiwidHlwZSI6ImltYWdlL3BuZyJ9LHsicHVycG9zZSI6ImFueSBtYXNrYWJsZSIsInNpemVzIjoiNTEyeDUxMiIsInNyYyI6Imljb24tNTEyLnBuZyIsInR5cGUiOiJpbWFnZS9wbmcifV0sImxhbmciOiJ6aC1DTiIsIm5hbWUiOiLlrp3lrp3nuqrlv7XlhowiLCJzY29wZSI6Ii4uLyIsInNob3J0X25hbWUiOiLlrp3lrp3nuqrlv7XlhowiLCJzdGFydF91cmwiOiIuLi9pbmRleC5odG1sIiwidGhlbWVfY29sb3IiOiIjQzQ3NDNBIn0=">
+<meta name="theme-color" id="themeColorMeta" content="#FFF8EF">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="宝宝纪念册">
+<title>宝宝纪念册</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFF8EF; --surface:#FFFFFF; --surface2:#FFF1DE; --ink:#3D2C1E; --muted:#8A7360;
+    --accent:#C4743A; --accent-ink:#fff; --accent2:#E9B44C; --line:#F0DDC4; --chip:#FDEBD3;
+    --radius:20px; --shadow:0 10px 30px rgba(120,72,20,.10);
+    --font-body:"Noto Sans SC",system-ui,-apple-system,sans-serif;
+    --font-display:"Noto Serif SC",serif;
+    --font-hand:"Ma Shan Zheng",cursive;
+  }
+  body[data-theme="forest"]{
+    --bg:#F1F5EA; --surface:#FFFFFF; --surface2:#E6EED8; --ink:#26351F; --muted:#6B7D5E;
+    --accent:#527A3A; --accent2:#A8C686; --line:#D3DFC0; --chip:#E2EDD2; --shadow:0 10px 30px rgba(60,90,40,.12);
+  }
+  body[data-theme="starry"]{
+    --bg:#131A2E; --surface:#1D2745; --surface2:#263257; --ink:#F2EAD8; --muted:#A9B2CC;
+    --accent:#E3B959; --accent-ink:#1D2745; --accent2:#7EA0D8; --line:#33406B; --chip:#2A3760;
+    --shadow:0 12px 32px rgba(0,0,0,.35);
+  }
+  body[data-theme="storybook"]{
+    --bg:#FFF7E0; --surface:#FFFFFF; --surface2:#FFEFC2; --ink:#33302A; --muted:#7A7263;
+    --accent:#E4572E; --accent2:#2A9D8F; --line:#FFD166; --chip:#FFE3A3; --shadow:4px 4px 0 rgba(51,48,42,.9);
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.6;transition:background .35s,color .35s}
+  button,input,select,textarea{font:inherit;color:inherit}
+  button,[role="button"],select,input,textarea,label.file-btn{min-height:44px}
+  button{cursor:pointer}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px 64px}
+
+  /* ---------- hero ---------- */
+  .hero{padding:34px 0 8px;display:grid;grid-template-columns:1.25fr .9fr;gap:20px;align-items:stretch}
+  @media(max-width:760px){.hero{grid-template-columns:1fr}}
+  .hero-main h1{font-family:var(--font-display);font-weight:900;font-size:clamp(34px,6vw,52px);line-height:1.15;margin:6px 0 10px;letter-spacing:.02em}
+  body[data-theme="storybook"] .hero-main h1{font-family:var(--font-hand);font-weight:400}
+  .hero-main p.lead{color:var(--muted);margin:0 0 18px;font-size:16px;max-width:34em}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--accent)}
+  .kicker::before{content:"";width:26px;height:2px;background:var(--accent);display:inline-block}
+  .stats{display:flex;flex-wrap:wrap;gap:10px}
+  .stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 16px;box-shadow:var(--shadow);min-width:104px}
+  .stat b{display:block;font-size:22px;line-height:1.2;font-family:var(--font-display)}
+  .stat span{font-size:12.5px;color:var(--muted)}
+  .profile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+  .profile h2{margin:0 0 4px;font-size:17px;font-family:var(--font-display)}
+  .profile p{margin:0 0 14px;color:var(--muted);font-size:13.5px}
+  .field{margin-bottom:12px}
+  .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+  .field input{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface2);outline:none}
+  .field input:focus{border-color:var(--accent)}
+  .age-line{font-size:14px;background:var(--chip);border-radius:12px;padding:10px 12px}
+  .age-line b{color:var(--accent)}
+
+  /* ---------- toolbar ---------- */
+  .toolbar{position:sticky;top:0;z-index:30;background:var(--bg);padding:14px 0 10px;border-bottom:1px solid var(--line);margin-top:18px}
+  .toolbar-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .toolbar .spacer{flex:1}
+  .seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px}
+  .seg button{border:0;background:transparent;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px;min-height:40px}
+  .seg button.on{background:var(--accent);color:var(--accent-ink)}
+  .btn{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 18px;font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:8px;box-shadow:var(--shadow)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .btn:active{transform:translateY(1px)}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .themes{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .themes .tlabel{font-size:13px;font-weight:700;color:var(--muted)}
+  .swatch{width:44px;height:44px;border-radius:50%;border:3px solid transparent;padding:3px;background:transparent;min-height:44px}
+  .swatch i{display:block;width:100%;height:100%;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
+  .swatch.on{border-color:var(--accent)}
+  .swatch small{display:none}
+  .theme-names{display:flex;gap:6px;flex-wrap:wrap}
+  .theme-names button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 13px;font-size:13px;font-weight:700;min-height:38px}
+  .theme-names button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+  /* ---------- upload ---------- */
+  .drop{margin-top:20px;border:2px dashed var(--accent);border-radius:var(--radius);background:var(--surface);padding:30px 20px;text-align:center;transition:background .2s}
+  .drop.drag{background:var(--surface2)}
+  .drop h3{margin:0 0 6px;font-family:var(--font-display);font-size:20px}
+  .drop p{margin:0 auto 16px;color:var(--muted);font-size:14px;max-width:36em}
+  .drop .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .note{font-size:12.5px;color:var(--muted);margin-top:12px}
+  input[type=file]{display:none}
+
+  /* ---------- photo wall ---------- */
+  .section-head{display:flex;align-items:baseline;gap:12px;margin:34px 0 14px;flex-wrap:wrap}
+  .section-head h2{font-family:var(--font-display);font-size:24px;margin:0}
+  body[data-theme="storybook"] .section-head h2{font-family:var(--font-hand);font-weight:400;font-size:28px}
+  .section-head p{margin:0;color:var(--muted);font-size:13.5px}
+  .grid{columns:3 260px;column-gap:16px}
+  .card{break-inside:avoid;margin-bottom:16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .card img{width:100%;display:block;cursor:zoom-in}
+  .card .meta{padding:12px 14px 14px}
+  .card .cap{font-size:14.5px;margin:0 0 4px;min-height:1.4em}
+  .card .cap.empty{color:var(--muted);font-style:italic}
+  .card .sub{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--muted);align-items:center}
+  .tag{background:var(--chip);color:var(--ink);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:700;white-space:nowrap}
+  .empty-state{text-align:center;padding:44px 16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+  .empty-state .big{font-family:var(--font-hand);font-size:30px;margin:0 0 8px;color:var(--accent)}
+  .empty-state p{color:var(--muted);margin:0}
+
+  /* ---------- timeline ---------- */
+  .timeline{position:relative;margin-left:10px;padding-left:26px;border-left:2px solid var(--line)}
+  .tl-group{position:relative;margin-bottom:28px}
+  .tl-group::before{content:"";position:absolute;left:-33px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+  .tl-group h3{margin:0 0 4px;font-family:var(--font-display);font-size:19px}
+  .tl-group h3 .age{color:var(--accent);font-size:14px;margin-left:8px}
+  .tl-group .count{color:var(--muted);font-size:13px;margin:0 0 12px}
+  .tl-photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+  .tl-photos figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .tl-photos img{width:100%;height:150px;object-fit:cover;display:block;cursor:zoom-in}
+  .tl-photos figcaption{padding:8px 10px;font-size:12.5px;color:var(--muted)}
+
+  /* ---------- milestones ---------- */
+  .progress{height:12px;background:var(--surface2);border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .progress i{display:block;height:100%;width:0;background:var(--accent);border-radius:999px;transition:width .4s}
+  .ms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:16px}
+  .ms{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 14px;text-align:left;box-shadow:var(--shadow)}
+  .ms .dot{width:38px;height:38px;border-radius:50%;background:var(--surface2);border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+  .ms .dot svg{width:20px;height:20px;stroke:var(--muted)}
+  .ms.lit .dot{background:var(--accent);border-color:var(--accent)}
+  .ms.lit .dot svg{stroke:var(--accent-ink)}
+  .ms b{display:block;font-size:15px;margin-bottom:2px}
+  .ms span{font-size:12.5px;color:var(--muted);display:block;margin-bottom:12px}
+  .ms button{width:100%;border-radius:999px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);font-weight:700;padding:8px;font-size:13.5px}
+  .ms.lit button{background:var(--accent);color:var(--accent-ink)}
+
+  /* ---------- letter ---------- */
+  .letter{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+  .letter h2{font-family:var(--font-hand);font-weight:400;font-size:26px;margin:0 0 6px;color:var(--accent)}
+  .letter p{color:var(--muted);font-size:14px;margin:0 0 14px}
+  .letter textarea{width:100%;min-height:130px;border:1.5px solid var(--line);border-radius:14px;background:var(--surface2);padding:14px;resize:vertical;line-height:1.9;font-family:var(--font-hand);font-size:18px}
+  .letter .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+  /* ---------- install ---------- */
+  .install{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .install img{border-radius:14px;flex:none}
+  .install-body{flex:1;min-width:230px}
+  .install-body h2{margin:0 0 4px;font-size:16.5px;font-family:var(--font-display)}
+  .install-body p{margin:0;font-size:13.5px;color:var(--muted)}
+  .install-body b{color:var(--ink)}
+
+  footer{margin-top:44px;text-align:center;color:var(--muted);font-size:13px}
+  footer .hand{font-family:var(--font-hand);font-size:19px;color:var(--accent)}
+
+  /* ---------- lightbox ---------- */
+  .lb{position:fixed;inset:0;background:rgba(12,10,8,.92);z-index:60;display:none;flex-direction:column}
+  .lb.open{display:flex}
+  .lb-top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;color:#fff}
+  .lb-top .idx{font-size:14px;opacity:.85}
+  .lb-top button{background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:999px;width:44px;height:44px;font-size:18px}
+  .lb-stage{flex:1;display:flex;align-items:center;justify-content:center;position:relative;padding:0 8px;min-height:0}
+  .lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
+  .navbtn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.16);color:#fff;border:0;width:46px;height:46px;border-radius:50%;font-size:20px}
+  .navbtn.prev{left:10px}.navbtn.next{right:10px}
+  .lb-panel{background:#1C1917;color:#F5EFE8;padding:16px;max-height:46vh;overflow:auto}
+  .lb-panel .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:560px){.lb-panel .grid2{grid-template-columns:1fr}}
+  .lb-panel label{font-size:12.5px;font-weight:700;display:block;margin-bottom:5px;opacity:.85}
+  .lb-panel input,.lb-panel select{width:100%;background:#2C2724;border:1px solid #4A423C;color:#fff;border-radius:10px;padding:10px 12px}
+  .lb-panel .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .lb-panel .row button{border-radius:999px;border:0;padding:10px 18px;font-weight:700}
+  .lb-panel .save{background:#E9B44C;color:#241A08}
+  .lb-panel .del{background:transparent;border:1.5px solid #B4552D !important;color:#F0916C}
+  .lb-panel .play{background:rgba(255,255,255,.14);color:#fff}
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:11px 20px;border-radius:999px;font-size:14px;font-weight:700;opacity:0;pointer-events:none;transition:.3s;z-index:80;max-width:88vw;text-align:center}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @media (prefers-reduced-motion: reduce){*{transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body data-theme="cream">
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-main">
+      <span class="kicker">成长纪念册</span>
+      <h1 id="heroTitle">宝宝的<br>第一本纪念册</h1>
+      <p class="lead">把宝宝的照片都收进来吧——按月龄排成一条成长时间线，第一次翻身、第一次长牙都可以在这里点亮。打开链接就能用，不用注册、不用登录；照片只保存在你自己的手机里，别人看不到。</p>
+      <div class="stats">
+        <div class="stat"><b id="statPhotos">0</b><span>已收录照片</span></div>
+        <div class="stat"><b id="statDays">—</b><span>来到世界（天）</span></div>
+        <div class="stat"><b id="statMs">0 / 12</b><span>已点亮里程碑</span></div>
+      </div>
+    </div>
+    <div class="profile">
+      <h2>宝宝小档案</h2>
+      <p>填上名字和出生日期，纪念册会自动算出每张照片拍摄时的月龄。</p>
+      <div class="field">
+        <label for="babyName">宝宝名字 / 小名</label>
+        <input id="babyName" type="text" placeholder="比如：小满" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="babyBirth">出生日期</label>
+        <input id="babyBirth" type="date">
+      </div>
+      <div class="age-line" id="ageLine">填好出生日期后，这里会显示宝宝今天多大了。</div>
+    </div>
+  </div>
+
+  <!-- INSTALL -->
+  <div class="install" id="installCard">
+    <img src="data:image/png;base64,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" alt="" width="54" height="54">
+    <div class="install-body">
+      <h2>把纪念册放到手机桌面</h2>
+      <p><b>iPhone：</b>用 Safari 打开这个链接 → 点底部的分享按钮 → 选「添加到主屏幕」。<br><b>安卓：</b>用 Chrome 打开 → 点右上角菜单 → 选「添加到主屏幕」或「安装应用」。</p>
+      <p class="note" style="margin:6px 0 0">放到桌面后，点图标就能直接打开，和 App 一样用。你存的照片和写的内容只在这台手机里；别人打开同一个链接，看到的是他自己的空白纪念册，互相看不到。</p>
+    </div>
+  </div>
+
+  <!-- TOOLBAR -->
+  <div class="toolbar">
+    <div class="toolbar-row">
+      <div class="themes">
+        <span class="tlabel">风格</span>
+        <div class="theme-names" id="themeNames">
+          <button data-set-theme="cream" class="on">奶油</button>
+          <button data-set-theme="forest">森系</button>
+          <button data-set-theme="starry">星空</button>
+          <button data-set-theme="storybook">绘本</button>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="seg" role="group" aria-label="视图切换">
+        <button id="viewWall" class="on">照片墙</button>
+        <button id="viewTimeline">时间线</button>
+      </div>
+    </div>
+    <div class="toolbar-row" style="margin-top:10px">
+      <label class="btn primary file-btn" for="fileInput">＋ 添加照片</label>
+      <button class="btn" id="btnRandom" disabled>随机回忆一张</button>
+      <button class="btn" id="btnSlide" disabled>播放幻灯片</button>
+      <div class="spacer"></div>
+      <span class="note" style="margin:0" id="sortNote">照片按拍摄日期从新到旧排列</span>
+    </div>
+  </div>
+
+  <!-- UPLOAD -->
+  <div class="drop" id="dropZone">
+    <h3>把照片放进来</h3>
+    <p>点下面的按钮一次多选，或者把照片文件直接拖到这里。五十几张可以分几次加，一次全选也行。手机上点按钮后从相册里多选即可。</p>
+    <div class="row">
+      <label class="btn primary file-btn" for="fileInput">从相册 / 文件选择照片</label>
+    </div>
+    <p class="note">照片保存在你自己手机的浏览器里，不上传到任何地方——关掉页面再打开还在。每个人打开这个链接，存的都是自己的照片，互不干扰、互相看不到。换手机或清理浏览器数据会清掉照片，重要的记得用下方「存成长图」备份一份。</p>
+    <input id="fileInput" type="file" accept="image/*" multiple>
+  </div>
+
+  <!-- PHOTO WALL / TIMELINE -->
+  <div class="section-head">
+    <h2 id="wallTitle">照片墙</h2>
+    <p id="wallHint">点开照片可以看大图、改日期、写一句话、打上里程碑标签。</p>
+  </div>
+  <div id="wallView">
+    <div class="empty-state" id="emptyState">
+      <p class="big">第一页，从第一张照片开始</p>
+      <p>还没有照片。用上面的按钮把宝宝的照片加进来，这里就会变成一面照片墙。</p>
+    </div>
+    <div class="grid" id="photoGrid" style="display:none"></div>
+  </div>
+  <div id="timelineView" style="display:none">
+    <div class="empty-state" id="emptyTimeline">
+      <p class="big">时间线在等第一张照片</p>
+      <p>加上照片并填好出生日期后，照片会按月龄自动分组排在这里。</p>
+    </div>
+    <div class="timeline" id="timeline" style="display:none"></div>
+  </div>
+
+  <!-- MILESTONES -->
+  <div class="section-head">
+    <h2>成长里程碑</h2>
+    <p>做到了就点亮它——点亮的时刻，就是纪念册里最闪光的一页。</p>
+  </div>
+  <div class="progress" aria-hidden="true"><i id="msBar"></i></div>
+  <div class="ms-grid" id="msGrid"></div>
+
+  <!-- LETTER -->
+  <div class="section-head">
+    <h2>时光胶囊</h2>
+    <p>写一封信，留给长大后的宝宝。</p>
+  </div>
+  <div class="letter">
+    <h2>亲爱的宝宝：</h2>
+    <p>现在写下的这几句话，等宝宝长大后再打开看。可以写今天发生的小事，也可以写你最想对他 / 她说的话。</p>
+    <textarea id="letterText" placeholder="比如：今天你第一次自己扶着沙发站了起来，摇摇晃晃的，我们都笑出了声……"></textarea>
+    <div class="row">
+      <button class="btn primary" id="btnLetterDownload">下载这封信保存</button>
+      <button class="btn" id="btnPoster">把照片墙存成一张长图</button>
+    </div>
+    <p class="note">“存成长图”会把当前照片墙拼成一张图片下载下来，适合发给家人或打印出来贴在墙上。</p>
+  </div>
+
+  <footer>
+    <p class="hand" id="footHand">慢慢长大，我们慢慢记录。</p>
+    <p>宝宝纪念册 · 每一张照片，都算数。</p>
+  </footer>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="照片大图">
+  <div class="lb-top">
+    <span class="idx" id="lbIdx">1 / 1</span>
+    <span style="display:flex;gap:8px">
+      <button id="lbPlay" aria-label="播放 / 暂停幻灯片">▶</button>
+      <button id="lbClose" aria-label="关闭">✕</button>
+    </span>
+  </div>
+  <div class="lb-stage">
+    <img id="lbImg" alt="宝宝照片大图">
+    <button class="navbtn prev" id="lbPrev" aria-label="上一张">‹</button>
+    <button class="navbtn next" id="lbNext" aria-label="下一张">›</button>
+  </div>
+  <div class="lb-panel">
+    <div class="grid2">
+      <div>
+        <label for="lbCap">给这张照片写一句话</label>
+        <input id="lbCap" type="text" placeholder="比如：第一次去公园，盯着泡泡看了好久">
+      </div>
+      <div>
+        <label for="lbDate">拍摄日期</label>
+        <input id="lbDate" type="date">
+      </div>
+      <div>
+        <label for="lbTag">里程碑标签</label>
+        <select id="lbTag">
+          <option value="">日常记录</option>
+          <option>满月</option><option>百天</option><option>第一次微笑</option>
+          <option>第一次翻身</option><option>第一次长牙</option><option>第一次坐起来</option>
+          <option>第一次爬行</option><option>第一次吃辅食</option><option>第一次叫爸爸妈妈</option>
+          <option>第一次站立</option><option>第一次走路</option><option>周岁</option>
+        </select>
+      </div>
+      <div>
+        <label>拍摄时的月龄</label>
+        <input id="lbAge" type="text" readonly value="填好出生日期后自动计算">
+      </div>
+    </div>
+    <div class="row">
+      <button class="save" id="lbSave">保存这张的记录</button>
+      <button class="del" id="lbDelete">从纪念册移除</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<canvas id="posterCanvas" style="display:none"></canvas>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(id){ return document.getElementById(id); };
+
+  /* ---------- state (this session only) ---------- */
+  var photos = [];        // {id, url, name, date:'yyyy-mm-dd', caption, tag}
+  var nextId = 1;
+  var currentView = "wall";
+  var lbIndex = -1;
+  var slideTimer = null;
+
+  var MILESTONES = [
+    {name:"第一次微笑", hint:"出生后 1–2 个月"},
+    {name:"第一次翻身", hint:"大约 3–5 个月"},
+    {name:"第一次长牙", hint:"大约 4–10 个月"},
+    {name:"第一次坐起来", hint:"大约 6–8 个月"},
+    {name:"第一次爬行", hint:"大约 7–10 个月"},
+    {name:"第一次吃辅食", hint:"大约 6 个月"},
+    {name:"第一次叫爸爸妈妈", hint:"大约 8–12 个月"},
+    {name:"第一次站立", hint:"大约 9–12 个月"},
+    {name:"第一次走路", hint:"大约 12–15 个月"},
+    {name:"满月", hint:"来到世界第 30 天"},
+    {name:"百天", hint:"第 100 天的小庆祝"},
+    {name:"周岁生日", hint:"一整年的成长"}
+  ];
+  var litMs = {};
+
+  /* ---------- 本机保存：只存在打开页面这台手机的浏览器里，别人的设备读不到 ---------- */
+  var STORE_KEY = "baobao-jinian-ce-v1";
+  var dbPromise = null;
+  function openDB(){
+    if(dbPromise) return dbPromise;
+    dbPromise = new Promise(function(resolve, reject){
+      if(!("indexedDB" in window)) return reject(new Error("no indexedDB"));
+      var req = indexedDB.open("baobao-jinian-ce", 1);
+      req.onupgradeneeded = function(){ req.result.createObjectStore("photos", {keyPath:"id"}); };
+      req.onsuccess = function(){ resolve(req.result); };
+      req.onerror = function(){ reject(req.error); };
+    });
+    return dbPromise;
+  }
+  function dbPut(p){
+    return openDB().then(function(db){
+      return new Promise(function(resolve, reject){
+        var tx = db.transaction("photos", "readwrite");
+        tx.objectStore("photos").put({id:p.id, blob:p.blob, name:p.name, date:p.date, caption:p.caption, tag:p.tag});
+        tx.oncomplete = function(){ resolve(); };
+        tx.onerror = function(){ reject(tx.error); };
+      });
+    });
+  }
+  function dbDelete(id){
+    return openDB().then(function(db){
+      return new Promise(function(resolve){
+        var tx = db.transaction("photos", "readwrite");
+        tx.objectStore("photos").delete(id);
+        tx.oncomplete = function(){ resolve(); };
+        tx.onerror = function(){ resolve(); };
+      });
+    }).catch(function(){});
+  }
+  function dbGetAll(){
+    return openDB().then(function(db){
+      return new Promise(function(resolve, reject){
+        var out = [];
+        var req = db.transaction("photos", "readonly").objectStore("photos").openCursor();
+        req.onsuccess = function(){
+          var c = req.result;
+          if(c){ out.push(c.value); c.continue(); } else resolve(out);
+        };
+        req.onerror = function(){ reject(req.error); };
+      });
+    });
+  }
+  function saveSettings(){
+    try{
+      localStorage.setItem(STORE_KEY, JSON.stringify({
+        name: $("babyName").value,
+        birth: $("babyBirth").value,
+        theme: document.body.getAttribute("data-theme") || "cream",
+        litMs: litMs,
+        letter: $("letterText").value
+      }));
+    }catch(e){ /* 存储不可用时不影响使用，只是不跨次保存 */ }
+  }
+  function loadSettings(){
+    try{ return JSON.parse(localStorage.getItem(STORE_KEY) || "null"); }catch(e){ return null; }
+  }
+  /* 大图先缩到最长边 1600px 再存，五十几张也放得下，画质看不出差别 */
+  function processFile(f){
+    return new Promise(function(resolve){
+      var url = URL.createObjectURL(f);
+      var img = new Image();
+      img.onload = function(){
+        var w = img.naturalWidth || 0, h = img.naturalHeight || 0;
+        var scale = Math.min(1, 1600 / Math.max(w, h));
+        if(!w || scale >= 1){ URL.revokeObjectURL(url); resolve(f); return; }
+        var cv = document.createElement("canvas");
+        cv.width = Math.round(w * scale); cv.height = Math.round(h * scale);
+        cv.getContext("2d").drawImage(img, 0, 0, cv.width, cv.height);
+        URL.revokeObjectURL(url);
+        if(cv.toBlob) cv.toBlob(function(b){ resolve(b || f); }, "image/jpeg", 0.85);
+        else resolve(f);
+      };
+      img.onerror = function(){ URL.revokeObjectURL(url); resolve(f); };
+      img.src = url;
+    });
+  }
+
+  var CHECK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+  var STAR_SVG  = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"/></svg>';
+
+  function toast(msg){
+    var t = $("toast"); t.textContent = msg; t.classList.add("show");
+    clearTimeout(t._h); t._h = setTimeout(function(){ t.classList.remove("show"); }, 2400);
+  }
+  function esc(s){ return String(s||"").replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+  function pad(n){ return (n<10?"0":"")+n; }
+  function toISO(d){ return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+  function birthDate(){ var v = $("babyBirth").value; return v ? new Date(v+"T00:00:00") : null; }
+
+  function ageText(photoISO){
+    var b = birthDate(); if(!b || !photoISO) return "";
+    var p = new Date(photoISO+"T00:00:00");
+    var days = Math.floor((p - b)/86400000);
+    if(days < 0) return "出生之前";
+    if(days < 30) return "出生第 " + (days+1) + " 天";
+    var months = (p.getFullYear()-b.getFullYear())*12 + (p.getMonth()-b.getMonth()) - (p.getDate() < b.getDate() ? 1 : 0);
+    if(months < 12){
+      var rem = Math.floor((p - new Date(b.getFullYear(), b.getMonth()+months, b.getDate()))/86400000);
+      return months + " 个月" + (rem>0 ? "零 " + rem + " 天" : "");
+    }
+    var years = Math.floor(months/12), m2 = months%12;
+    return years + " 岁" + (m2>0 ? " " + m2 + " 个月" : "");
+  }
+  function monthKey(photoISO){
+    var b = birthDate(); if(!b || !photoISO) return {key:"nodate", label:"还没定日期的照片", age:""};
+    var p = new Date(photoISO+"T00:00:00");
+    var months = (p.getFullYear()-b.getFullYear())*12 + (p.getMonth()-b.getMonth()) - (p.getDate() < b.getDate() ? 1 : 0);
+    if(months < 0) months = 0;
+    var label = months < 1 ? "第 1 个月" : (months < 12 ? (months+1) + " 个月大" : (Math.floor(months/12) + " 岁 " + (months%12+1) + " 个月"));
+    return {key:"m"+months, label:label, age:ageText(photoISO), order:months};
+  }
+
+  /* ---------- profile ---------- */
+  function refreshProfile(){
+    var name = $("babyName").value.trim();
+    $("heroTitle").innerHTML = name ? esc(name) + "的<br>第一本纪念册" : "宝宝的<br>第一本纪念册";
+    $("footHand").textContent = name ? "慢慢长大，我们慢慢记录——写给" + name + "。" : "慢慢长大，我们慢慢记录。";
+    document.title = name ? name + "的纪念册" : "宝宝纪念册";
+    var b = birthDate();
+    if(b){
+      var days = Math.floor((new Date().setHours(0,0,0,0) - b)/86400000);
+      $("statDays").textContent = days >= 0 ? days + 1 : "—";
+      if(days >= 0){
+        var y = Math.floor(days/365), m = Math.floor((days%365)/30), d = (days%365)%30;
+        var parts = [];
+        if(y) parts.push(y+" 岁"); if(m) parts.push(m+" 个月"); if(d||!parts.length) parts.push(d+" 天");
+        $("ageLine").innerHTML = "宝宝今天 <b>" + parts.join(" ") + "</b> 了，来到世界第 <b>" + (days+1) + "</b> 天。";
+      } else { $("ageLine").textContent = "出生日期好像在未来，检查一下年份有没有填错。"; }
+    } else {
+      $("statDays").textContent = "—";
+      $("ageLine").textContent = "填好出生日期后，这里会显示宝宝今天多大了。";
+    }
+    renderAll();
+  }
+  $("babyName").addEventListener("input", function(){ refreshProfile(); saveSettings(); });
+  $("babyBirth").addEventListener("change", function(){ refreshProfile(); saveSettings(); });
+
+  /* ---------- themes ---------- */
+  function applyTheme(name){
+    document.body.setAttribute("data-theme", name);
+    var all = $("themeNames").querySelectorAll("button");
+    for(var i=0;i<all.length;i++) all[i].classList.toggle("on", all[i].getAttribute("data-set-theme")===name);
+    var colors = {cream:"#FFF8EF", forest:"#F1F5EA", starry:"#131A2E", storybook:"#FFF7E0"};
+    var meta = $("themeColorMeta");
+    if(meta) meta.setAttribute("content", colors[name] || colors.cream);
+  }
+  $("themeNames").addEventListener("click", function(e){
+    var btn = e.target.closest("[data-set-theme]"); if(!btn) return;
+    applyTheme(btn.getAttribute("data-set-theme"));
+    saveSettings();
+    var names = {cream:"奶油风", forest:"森系风", starry:"星空风", storybook:"绘本风"};
+    toast("已切换成" + names[btn.getAttribute("data-set-theme")] + "，照片和记录都还在");
+  });
+
+  /* ---------- upload ---------- */
+  function addFiles(fileList){
+    var files = [];
+    for(var i=0;i<fileList.length;i++) if(/^image\//.test(fileList[i].type)) files.push(fileList[i]);
+    if(!files.length){ toast("这几个文件不是图片，换照片再试试"); return; }
+    toast("正在把 " + files.length + " 张照片存进纪念册…");
+    var chain = Promise.resolve(), added = 0, failed = 0;
+    files.forEach(function(f){
+      chain = chain.then(function(){
+        return processFile(f).then(function(blob){
+          var d = f.lastModified ? new Date(f.lastModified) : new Date();
+          var p = { id: nextId++, blob: blob, url: URL.createObjectURL(blob), name: f.name, date: toISO(d), caption:"", tag:"" };
+          photos.push(p); added++;
+          return dbPut(p).catch(function(){ failed++; });
+        });
+      });
+    });
+    chain.then(function(){
+      renderAll();
+      if(failed) toast("收进了 " + added + " 张，有 " + failed + " 张因为手机存储空间不足没存住，先清点空间再加");
+      else toast("加好了，这次收进 " + added + " 张，现在一共 " + photos.length + " 张，已经存进这台手机");
+    });
+  }
+  $("fileInput").addEventListener("change", function(){ addFiles(this.files); this.value=""; });
+  var dz = $("dropZone");
+  ["dragenter","dragover"].forEach(function(ev){ dz.addEventListener(ev, function(e){ e.preventDefault(); dz.classList.add("drag"); }); });
+  ["dragleave","drop"].forEach(function(ev){ dz.addEventListener(ev, function(e){ e.preventDefault(); dz.classList.remove("drag"); }); });
+  dz.addEventListener("drop", function(e){ if(e.dataTransfer && e.dataTransfer.files.length) addFiles(e.dataTransfer.files); });
+
+  /* ---------- render ---------- */
+  function sortedPhotos(){
+    return photos.slice().sort(function(a,b){ return (b.date||"") < (a.date||"") ? -1 : (b.date||"") > (a.date||"") ? 1 : b.id - a.id; });
+  }
+  function renderStats(){
+    $("statPhotos").textContent = photos.length;
+    var lit = Object.keys(litMs).filter(function(k){ return litMs[k]; }).length;
+    $("statMs").textContent = lit + " / " + MILESTONES.length;
+    $("msBar").style.width = (lit / MILESTONES.length * 100) + "%";
+    $("btnRandom").disabled = !photos.length;
+    $("btnSlide").disabled = !photos.length;
+  }
+  function renderWall(){
+    var list = sortedPhotos();
+    $("emptyState").style.display = list.length ? "none" : "block";
+    var grid = $("photoGrid");
+    grid.style.display = list.length ? "block" : "none";
+    grid.innerHTML = list.map(function(p){
+      var age = ageText(p.date);
+      return '<article class="card">' +
+        '<img src="'+p.url+'" alt="'+esc(p.caption || "宝宝照片")+'" data-open="'+p.id+'" loading="lazy">' +
+        '<div class="meta"><p class="cap'+(p.caption?"":" empty")+'">'+esc(p.caption || "点开写一句话…")+'</p>' +
+        '<div class="sub"><span>'+esc(p.date||"")+(age ? " · " + esc(age) : "")+'</span><span class="tag">'+esc(p.tag || "日常记录")+'</span></div></div></article>';
+    }).join("");
+  }
+  function renderTimeline(){
+    var list = sortedPhotos();
+    $("emptyTimeline").style.display = list.length ? "none" : "block";
+    var tl = $("timeline");
+    tl.style.display = list.length ? "block" : "none";
+    if(!list.length){ tl.innerHTML=""; return; }
+    var groups = {}, order = [];
+    list.slice().sort(function(a,b){ return (a.date||"") < (b.date||"") ? -1 : 1; }).forEach(function(p){
+      var g = monthKey(p.date);
+      if(!groups[g.key]){ groups[g.key] = {label:g.label, order:(g.order==null?9999:g.order), items:[]}; order.push(g.key); }
+      groups[g.key].items.push(p);
+    });
+    order.sort(function(a,b){ return groups[a].order - groups[b].order; });
+    tl.innerHTML = order.map(function(k){
+      var g = groups[k];
+      return '<div class="tl-group"><h3>'+esc(g.label)+'</h3><p class="count">这个阶段一共 '+g.items.length+' 张照片</p>' +
+        '<div class="tl-photos">' + g.items.map(function(p){
+          return '<figure><img src="'+p.url+'" alt="'+esc(p.caption || "宝宝照片")+'" data-open="'+p.id+'" loading="lazy"><figcaption>'+esc(p.date||"")+(p.caption ? " · " + esc(p.caption) : "")+'</figcaption></figure>';
+        }).join("") + '</div></div>';
+    }).join("");
+  }
+  function renderMs(){
+    $("msGrid").innerHTML = MILESTONES.map(function(m, i){
+      var lit = !!litMs[i];
+      return '<div class="ms'+(lit?" lit":"")+'"><div class="dot">'+(lit?CHECK_SVG:STAR_SVG)+'</div>' +
+        '<b>'+esc(m.name)+'</b><span>'+esc(m.hint)+'</span>' +
+        '<button data-ms="'+i+'">'+(lit ? "已点亮 ✓ 再点取消" : "点亮这一刻")+'</button></div>';
+    }).join("");
+  }
+  function renderAll(){ renderStats(); renderWall(); renderTimeline(); renderMs(); }
+
+  document.addEventListener("click", function(e){
+    var img = e.target.closest("[data-open]");
+    if(img){ openLbById(parseInt(img.getAttribute("data-open"),10)); return; }
+    var ms = e.target.closest("[data-ms]");
+    if(ms){
+      var i = ms.getAttribute("data-ms");
+      litMs[i] = !litMs[i];
+      saveSettings();
+      if(litMs[i]) toast("点亮了「" + MILESTONES[i].name + "」——这一刻记进纪念册了");
+      renderAll();
+    }
+  });
+
+  /* ---------- view toggle ---------- */
+  function setView(v){
+    currentView = v;
+    $("viewWall").classList.toggle("on", v==="wall");
+    $("viewTimeline").classList.toggle("on", v==="timeline");
+    $("wallView").style.display = v==="wall" ? "block" : "none";
+    $("timelineView").style.display = v==="timeline" ? "block" : "none";
+    $("wallTitle").textContent = v==="wall" ? "照片墙" : "成长时间线";
+    $("wallHint").textContent = v==="wall" ? "点开照片可以看大图、改日期、写一句话、打上里程碑标签。" : "照片按月龄自动分组——从第 1 个月到周岁，一眼看完长大的全过程。";
+    $("sortNote").textContent = v==="wall" ? "照片按拍摄日期从新到旧排列" : "时间线按月龄从小到大排列";
+  }
+  $("viewWall").addEventListener("click", function(){ setView("wall"); });
+  $("viewTimeline").addEventListener("click", function(){ setView("timeline"); });
+
+  /* ---------- lightbox ---------- */
+  function lbList(){ return sortedPhotos(); }
+  function openLbById(id){
+    var list = lbList();
+    for(var i=0;i<list.length;i++) if(list[i].id===id){ lbIndex = i; break; }
+    showLb(); $("lightbox").classList.add("open"); document.body.style.overflow = "hidden";
+  }
+  function showLb(){
+    var list = lbList(); if(!list.length) return closeLb();
+    if(lbIndex < 0) lbIndex = 0; if(lbIndex >= list.length) lbIndex = list.length - 1;
+    var p = list[lbIndex];
+    $("lbImg").src = p.url;
+    $("lbIdx").textContent = (lbIndex+1) + " / " + list.length;
+    $("lbCap").value = p.caption || "";
+    $("lbDate").value = p.date || "";
+    $("lbTag").value = p.tag || "";
+    $("lbAge").value = ageText(p.date) || "填好出生日期后自动计算";
+  }
+  function closeLb(){ stopSlide(); $("lightbox").classList.remove("open"); document.body.style.overflow = ""; }
+  $("lbClose").addEventListener("click", closeLb);
+  $("lbPrev").addEventListener("click", function(){ lbIndex--; showLb(); });
+  $("lbNext").addEventListener("click", function(){ lbIndex++; showLb(); });
+  $("lbDate").addEventListener("change", function(){ $("lbAge").value = ageText(this.value) || "填好出生日期后自动计算"; });
+  $("lbSave").addEventListener("click", function(){
+    var list = lbList(), p = list[lbIndex]; if(!p) return;
+    p.caption = $("lbCap").value.trim(); p.date = $("lbDate").value; p.tag = $("lbTag").value;
+    if(p.tag){ for(var i=0;i<MILESTONES.length;i++){ if(MILESTONES[i].name===p.tag){ litMs[i]=true; } } }
+    dbPut(p).catch(function(){});
+    saveSettings();
+    toast("这张的记录存好了"); renderAll(); showLb();
+  });
+  $("lbDelete").addEventListener("click", function(){
+    var list = lbList(), p = list[lbIndex]; if(!p) return;
+    photos = photos.filter(function(x){ return x.id !== p.id; });
+    dbDelete(p.id);
+    URL.revokeObjectURL(p.url);
+    toast("已从纪念册移除这张（原照片还在你的相册里）");
+    renderAll();
+    if(!photos.length) closeLb(); else showLb();
+  });
+  document.addEventListener("keydown", function(e){
+    if(!$("lightbox").classList.contains("open")) return;
+    if(e.key === "Escape") closeLb();
+    if(e.key === "ArrowLeft"){ lbIndex--; showLb(); }
+    if(e.key === "ArrowRight"){ lbIndex++; showLb(); }
+  });
+
+  /* ---------- slideshow & random ---------- */
+  function startSlide(){
+    if(!photos.length) return;
+    if(lbIndex < 0) lbIndex = 0;
+    if(!$("lightbox").classList.contains("open")){ showLb(); $("lightbox").classList.add("open"); document.body.style.overflow="hidden"; }
+    stopSlide();
+    slideTimer = setInterval(function(){ lbIndex = (lbIndex+1) % lbList().length; showLb(); }, 2600);
+    $("lbPlay").textContent = "❚❚";
+    toast("幻灯片播放中，每 2.6 秒一张");
+  }
+  function stopSlide(){ if(slideTimer){ clearInterval(slideTimer); slideTimer = null; } $("lbPlay").textContent = "▶"; }
+  $("btnSlide").addEventListener("click", startSlide);
+  $("lbPlay").addEventListener("click", function(){ slideTimer ? stopSlide() : startSlide(); });
+  $("btnRandom").addEventListener("click", function(){
+    if(!photos.length) return;
+    lbIndex = Math.floor(Math.random() * photos.length);
+    showLb(); $("lightbox").classList.add("open"); document.body.style.overflow = "hidden";
+    toast("随机翻到一张——还记得这一天吗？");
+  });
+
+  /* ---------- letter autosave ---------- */
+  var letterTimer = null;
+  $("letterText").addEventListener("input", function(){
+    clearTimeout(letterTimer);
+    letterTimer = setTimeout(saveSettings, 500);
+  });
+
+  /* ---------- letter download ---------- */
+  $("btnLetterDownload").addEventListener("click", function(){
+    var txt = $("letterText").value.trim();
+    if(!txt){ toast("先写几句话再下载吧"); return; }
+    var name = $("babyName").value.trim() || "宝宝";
+    var head = "写给" + name + "的一封信\n日期：" + toISO(new Date()) + "\n\n";
+    var blob = new Blob([head + txt + "\n"], {type:"text/plain;charset=utf-8"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "写给" + name + "的信.txt"; a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+    toast("信已经下载好了，收好它");
+  });
+
+  /* ---------- poster (long image) ---------- */
+  $("btnPoster").addEventListener("click", function(){
+    var list = sortedPhotos();
+    if(!list.length){ toast("先加上照片，才能拼成长图"); return; }
+    toast("正在拼长图，照片多的话等几秒…");
+    var cols = 3, cell = 360, gap = 14, headH = 110;
+    var rows = Math.ceil(list.length / cols);
+    var W = cols*cell + gap*(cols+1), H = headH + rows*(cell+58) + gap;
+    var cv = $("posterCanvas"); cv.width = W; cv.height = H;
+    var ctx = cv.getContext("2d");
+    var dark = document.body.getAttribute("data-theme") === "starry";
+    ctx.fillStyle = dark ? "#131A2E" : "#FFF8EF"; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle = dark ? "#F2EAD8" : "#3D2C1E";
+    ctx.font = "900 52px 'Noto Serif SC', serif"; ctx.textAlign = "center";
+    var name = $("babyName").value.trim();
+    ctx.fillText((name ? name + "的" : "宝宝的") + "成长纪念册", W/2, 72);
+    var loaded = 0;
+    list.forEach(function(p, idx){
+      var img = new Image();
+      img.onload = function(){
+        var col = idx % cols, row = Math.floor(idx / cols);
+        var x = gap + col*(cell+gap), y = headH + gap + row*(cell+58);
+        var s = Math.min(img.width, img.height), sx = (img.width-s)/2, sy = (img.height-s)/2;
+        ctx.drawImage(img, sx, sy, s, s, x, y, cell, cell);
+        ctx.fillStyle = dark ? "#A9B2CC" : "#8A7360"; ctx.font = "26px 'Noto Sans SC', sans-serif"; ctx.textAlign = "left";
+        ctx.fillText((p.date||"") + (p.caption ? " · " + p.caption.slice(0,14) : ""), x+2, y+cell+38);
+        if(++loaded === list.length){
+          var a = document.createElement("a");
+          a.href = cv.toDataURL("image/png"); a.download = "宝宝纪念册-照片墙.png"; a.click();
+          toast("长图存好了，去相册或文件里看");
+        }
+      };
+      img.onerror = function(){ if(++loaded === list.length) toast("有几张图没拼上，再试一次"); };
+      img.src = p.url;
+    });
+  });
+
+  /* ---------- 已经从主屏幕图标打开时，不再显示安装说明 ---------- */
+  if(window.navigator.standalone || (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches)){
+    $("installCard").style.display = "none";
+  }
+
+  /* ---------- 打开页面时，恢复这台手机上次存的内容 ---------- */
+  (function restore(){
+    var s = loadSettings();
+    if(s){
+      if(s.name) $("babyName").value = s.name;
+      if(s.birth) $("babyBirth").value = s.birth;
+      if(s.letter) $("letterText").value = s.letter;
+      if(s.litMs) litMs = s.litMs;
+      if(s.theme) applyTheme(s.theme);
+    }
+    refreshProfile();
+    dbGetAll().then(function(records){
+      var restored = 0;
+      records.forEach(function(r){
+        if(!r.blob) return;
+        photos.push({ id:r.id, blob:r.blob, url:URL.createObjectURL(r.blob), name:r.name, date:r.date, caption:r.caption || "", tag:r.tag || "" });
+        if(r.id >= nextId) nextId = r.id + 1;
+        restored++;
+      });
+      if(restored) renderAll();
+    }).catch(function(){ /* 浏览器不支持本机存储时，纪念册仍可当次使用 */ });
+  })();
+})();
+</script>
+</body>
+</html>
